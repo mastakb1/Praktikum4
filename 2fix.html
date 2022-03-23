@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Mengubah warna kotak 2x klik</title>
+    <script src="jquery.js"></script>
+    <script type="text/javascript">
+        var click = 0;
+
+        function ubah(id) {
+            var merah = document.getElementById(id);
+            click++;
+            if (click == 2) {
+                merah.style.backgroundColor = "red";
+                click = 0;
+            }
+        }
+    </script>
+    <style type="text/css">
+        button {
+            height: 5rem;
+            width: 5rem;
+            background-color: yellow;
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h5>klik 2x pada setiap kotak untuk mengubah warna kotak</h5>
+    <table style="empty-cells: show;">
+        <tr>
+            <button id="1" onclick="ubah(this.id)"></button>
+            <button id="2" onclick="ubah(this.id)"></button>
+            <button id="3" onclick="ubah(this.id)"></button>
+            <button id="4" onclick="ubah(this.id)"></button>
+        </tr>
+    </table>
+</body>
+
+</html>
